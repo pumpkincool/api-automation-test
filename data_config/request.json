@@ -1,0 +1,59 @@
+{
+  "pet1": {
+    "id": 40,
+    "category": {
+      "id": 40,
+      "name": "testapi40"
+    },
+    "name": "testapi40",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 40,
+        "name": "testapi40"
+      }
+    ],
+    "status": "available"
+  },
+"pet2": {
+    "id": 50,
+    "category": {
+      "id": 50,
+      "name": "testapi50"
+    },
+    "name": "testapi50",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 50,
+        "name": "testapi50"
+      }
+    ],
+    "status": "sold"
+  },
+"pet3": {
+    "id": 60,
+    "category": {
+      "id": 60,
+      "name": "testapi60"
+    },
+    "name": "testapi60",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 60,
+        "name": "testapi60"
+      }
+    ],
+    "status": "available"
+  },
+"pet4": {
+    "status": "available"
+  }
+}

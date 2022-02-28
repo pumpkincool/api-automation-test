@@ -1,0 +1,38 @@
+'2022-02-28 16:09:00.719': [DEBUG] [run_main.py:30] [{'name': 'testapi40'}]
+'2022-02-28 16:09:02.081': [DEBUG] [run_main.py:38] {
+  "category": {
+    "id": 40,
+    "name": "testapi40"
+  },
+  "id": 40,
+  "name": "testapi40",
+  "photoUrls": [
+    "string"
+  ],
+  "status": "available",
+  "tags": [
+    {
+      "id": 40,
+      "name": "testapi40"
+    }
+  ]
+}
+'2022-02-28 16:12:33.332': [DEBUG] [run_main.py:34] [{'name': 'testapi40'}]
+'2022-02-28 16:12:34.739': [DEBUG] [run_main.py:42] {
+  "category": {
+    "id": 40,
+    "name": "testapi40"
+  },
+  "id": 40,
+  "name": "testapi40",
+  "photoUrls": [
+    "string"
+  ],
+  "status": "available",
+  "tags": [
+    {
+      "id": 40,
+      "name": "testapi40"
+    }
+  ]
+}
