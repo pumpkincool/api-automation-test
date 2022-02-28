@@ -36,8 +36,8 @@ sql： select xxx from xxx（需要加sql：前缀）
 直接运行main下的run_main.py即可，运行完成后会将结果回写到excel用例下。
 
 第三方包管理：
-将依赖包配置在requirements.txt文件下，格式如下
-BeautifulReport==0.1.3yin用户
+将依赖包配置在requirements.txt文件下，格式如下:
 BeautifulReport==0.1.3
+requests==2.27.1
 文件自动生成pip freeze >requirements.txt
 依赖包安装：pip install -r requirements.txt
