@@ -1,9 +1,8 @@
-import unittest
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from BeautifulReport import BeautifulReport
-from pythonRequest.data.data_config_excel import *
+from data.data_config_excel import *
 import unittest
 
 

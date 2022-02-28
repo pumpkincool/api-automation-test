@@ -1,4 +1,4 @@
-from pythonRequest.data.data_config_excel import *
+from data.data_config_excel import *
 import configparser
 
 

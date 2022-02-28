@@ -1,7 +1,7 @@
 import unittest
-from pythonRequest.base.runmethod import *
-from pythonRequest.util.operation_json import *
-from pythonRequest.base.env_info import EnvInfo
+from base.runmethod import *
+from util.operation_json import *
+from base.env_info import EnvInfo
 
 
 class TestDemo(unittest.TestCase):

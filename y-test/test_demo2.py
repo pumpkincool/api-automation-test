@@ -1,6 +1,6 @@
 import unittest
-from pythonRequest.base.runmethod import *
-from pythonRequest.util.operation_json import *
+from base.runmethod import *
+from util.operation_json import *
 
 
 class TestDemo2(unittest.TestCase):

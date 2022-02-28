@@ -7159,13 +7159,27 @@ body.skin-3 {
 
 
     var resultData = {
-    "testPass": 2,
+    "testPass": 4,
     "testResult": [
         {
             "className": "TestDemo",
-            "methodName": "test_post",
+            "methodName": "test_01",
             "description": null,
-            "spendTime": "0.000313 s",
+            "spendTime": "1.35 s",
+            "status": "成功",
+            "log": [
+                "this is setUp...",
+                "127.0.0.1",
+                "rst: {'id': 60, 'category': {'id': 60, 'name': 'testapi60'}, 'name': 'testapi60', 'photoUrls': ['string'], 'tags': [{'id': 60, 'name': 'testapi60'}], 'status': 'available'}",
+                "this is tearDown...",
+                ""
+            ]
+        },
+        {
+            "className": "TestDemo",
+            "methodName": "test_02",
+            "description": null,
+            "spendTime": "5.1e-05 s",
             "status": "成功",
             "log": [
                 "this is setUp...",
@@ -7174,10 +7188,23 @@ body.skin-3 {
             ]
         },
         {
-            "className": "TestDemo",
-            "methodName": "test_post2",
+            "className": "TestDemo2",
+            "methodName": "test_03",
             "description": null,
-            "spendTime": "6.2e-05 s",
+            "spendTime": "1.42 s",
+            "status": "成功",
+            "log": [
+                "this is setUp...",
+                "rst: {'id': 60, 'category': {'id': 60, 'name': 'testapi60'}, 'name': 'testapi60', 'photoUrls': ['string'], 'tags': [{'id': 60, 'name': 'testapi60'}], 'status': 'available'}",
+                "this is tearDown...",
+                ""
+            ]
+        },
+        {
+            "className": "TestDemo2",
+            "methodName": "test_04",
+            "description": null,
+            "spendTime": "4.98e-05 s",
             "status": "成功",
             "log": [
                 "this is setUp...",
@@ -7187,10 +7214,10 @@ body.skin-3 {
         }
     ],
     "testName": "api测试报告",
-    "testAll": 2,
+    "testAll": 4,
     "testFail": 0,
-    "beginTime": "2022-02-25 10:17:15",
-    "totalTime": "0s",
+    "beginTime": "2022-02-28 18:01:18",
+    "totalTime": "3s",
     "testSkip": 0,
     "testError": 0
 };
