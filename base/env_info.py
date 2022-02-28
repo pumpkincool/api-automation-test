@@ -1,10 +1,10 @@
+from pythonRequest.data.data_config_excel import *
 import configparser
-# from pythonRequest.main.run_py import env_flag
 
 
 class EnvInfo:
-    def __init__(self, env_flag='test'):
-        self.env_flag = env_flag
+    def __init__(self):
+        self.env_flag = get_env_flag()
         self.config = configparser.ConfigParser()
         self.config.read('../env/env.ini')
         

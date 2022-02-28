@@ -12,6 +12,7 @@ class global_var:
     data = 9
     expect_result = 10
     actual_result = 11
+    env_flag = 'test'
 
 
 # 获取case_id
@@ -61,3 +62,11 @@ def get_expect_result():
 
 def get_actual_result():
     return global_var.actual_result
+
+
+def get_env_flag():
+    return global_var.env_flag
+
+
+def set_env_flag(env_flag):
+    global_var.env_flag = env_flag
