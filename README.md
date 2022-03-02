@@ -13,10 +13,12 @@
 
 
 相关配置：
-data.get_data.py文件中getData类init方法可以传入Excel的文件路径以及sheet页。如不传入，默认执行工程中data_config下的case.xls文件
-			 传参事例：self.opera_excel = operateExcel(file_name='路径', sheet_id=1)
-excel用例中的request内容使用json进行管理，通过关键字进行关联，json文件路径可在data.get_data.py文件中getData类get_json方法传入。如不传入，默认使用工程中data_config下的request.json文件
-			 传参事例：oper_json = operateJson(filename='路径')
+excel用例配置：
+configs下excel_config.ini可以配置本地Excel的文件路径以及sheet页。如不配置，默认执行工程中testcases下excel_case中的case.xls文件
+       配置事例：excel_location=/User/Desktop/xxx/xxx.xls
+				sheet_id=0
+excel用例中的request内容使用json进行管理，通过关键字进行关联，json文件路径可在excel_config.ini中json_location配置。如不配置，默认使用工程中datas下的request.json文件
+	   配置事例：excel_location=/User/Desktop/xxx/xxx.json
 configs下env.ini文件支持对不同环境的数据库连接信息进行配置，如host，username，password，db等
 	 
 		
