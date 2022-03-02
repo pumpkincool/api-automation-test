@@ -6,9 +6,9 @@ key_res = ['init']
 
 class operateJson:
 
-    def __init__(self, filename=None):
-        if filename:
-            self.filename = filename
+    def __init__(self, filepath=None):
+        if filepath:
+            self.filename = filepath
         else:
             self.filename = '../datas/request.json'
         self.data = self.read_data()

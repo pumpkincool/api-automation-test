@@ -3,18 +3,18 @@ from xlutils.copy import copy
 
 
 class operateExcel:
-    def __init__(self, file_name=None, sheet_id=None):
-        if file_name:
-            self.file_name = file_name
+    def __init__(self, file_path=None, sheet_id=None):
+        if file_path:
+            self.file_path = file_path
             self.sheet_id = sheet_id
         else:
-            self.file_name = '../testcases/excel_case/case.xls'
+            self.file_path = '../testcases/excel_case/case.xls'
             self.sheet_id = 0
         self.data = self.get_data()
 
     # 获取sheet内容
     def get_data(self):
-        data = xlrd.open_workbook(self.file_name)
+        data = xlrd.open_workbook(self.file_path)
         table = data.sheets()[self.sheet_id]
         return table
 
@@ -28,12 +28,12 @@ class operateExcel:
 
     # excel写入数据
     def write_value(self, row, col, value):
-        workbook = xlrd.open_workbook(self.file_name)
+        workbook = xlrd.open_workbook(self.file_path)
         new_workbook = copy(workbook)
         sheet_data = new_workbook.get_sheet(0)
         sheet_data.write(row, col)
         sheet_data.write(row, col, value)
-        new_workbook.save(self.file_name)
+        new_workbook.save(self.file_path)
 
     # 根据caseId获取行号
     def get_row_num(self, case_id):

@@ -3,7 +3,7 @@ import configparser
 
 class global_excel:
     config = configparser.ConfigParser()
-    config.read('../configs/excel_column.ini')
+    config.read('../configs/excel_config.ini')
     flag = 'excel'
 
 
@@ -53,3 +53,15 @@ def get_expect_result():
 
 def get_actual_result():
     return global_excel.config.getint(global_excel.flag, 'actual_result')
+
+
+def get_excel_location():
+    return global_excel.config.get(global_excel.flag, 'excel_location')
+
+
+def get_sheet_id():
+    return global_excel.config.get(global_excel.flag, 'sheet_id')
+
+
+def get_json_location():
+    return global_excel.config.get(global_excel.flag, 'json_location')
