@@ -14,7 +14,7 @@ class RunPy:
             set_env_flag('test')
             
     def run_py(self):
-        test_suite = unittest.defaultTestLoader.discover('../testcases', pattern='test*.py')
+        test_suite = unittest.defaultTestLoader.discover('../testcases/script_case', pattern='test*.py')
         result = BeautifulReport(test_suite)
         result.report(filename='BeautifulReport', description='api测试报告', report_dir='../reports', theme='theme_default')
 

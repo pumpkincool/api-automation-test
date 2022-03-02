@@ -1,10 +1,10 @@
 import configparser
-from businessHandler import env_flag
+from businessHandler.env_flag import *
 
 
 class getEnvInfo:
     def __init__(self):
-        self.env_flag = env_flag.get_env_flag()
+        self.env_flag = get_env_flag()
         self.config = configparser.ConfigParser()
         self.config.read('../configs/env.ini')
         

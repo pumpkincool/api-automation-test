@@ -4,6 +4,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
 
+from businessHandler.env_flag import *
 from businessHandler.runmethod import runMethod
 from businessHandler.dependent_data import dependentData
 from businessHandler.get_excel_data import getExcelData
@@ -14,6 +15,10 @@ from util.operation_log import Logger
 class RunMainMethod:
 
     def __init__(self):
+        if len(sys.argv) > 1:
+            set_env_flag(sys.argv[1])
+        else:
+            set_env_flag('test')
         self.run_method = runMethod()
         self.data = getExcelData()
         self.comm_util = common_util.Commonutil()

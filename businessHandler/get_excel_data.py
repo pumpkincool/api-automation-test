@@ -2,13 +2,15 @@ from util.operation_excel import operateExcel
 from util.operation_json import operateJson
 from util.operation_mysql import operationMysql
 from businessHandler import get_excel_column
+from businessHandler.get_env_info import *
 
 
 class getExcelData:
 
     def __init__(self):
         self.opera_excel = operateExcel()
-        self.opera_mysql = operationMysql('root', '123456', 'localhost', 'danica')
+        self.env = getEnvInfo()
+        self.opera_mysql = operationMysql(self.env.get_username(), self.env.get_password(), self.env.get_host(), self.env.get_db())
 
     # 获取case个数
     def get_case_lines(self):
