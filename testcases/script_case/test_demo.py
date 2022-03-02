@@ -1,7 +1,7 @@
 import unittest
-from base.runmethod import *
+from businessHandler.runmethod import *
 from util.operation_json import *
-from base.env_info import EnvInfo
+from businessHandler.get_env_info import getEnvInfo
 
 
 class TestDemo(unittest.TestCase):
@@ -14,7 +14,7 @@ class TestDemo(unittest.TestCase):
         print("this is setUp...")
 
     def test_01(self):
-        host = EnvInfo().get_host()
+        host = getEnvInfo().get_host()
         print(host)
         url = 'https://petstore.swagger.io/v2/pet'
         header = {'accept': 'application/json', 'Content-Type': 'application/json'}

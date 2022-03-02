@@ -1,5 +1,5 @@
 import pymysql
-from util.log import Logger
+from util.operation_log import Logger
 
 
 class operationMysql:

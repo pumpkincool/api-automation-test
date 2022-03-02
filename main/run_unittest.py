@@ -33,6 +33,6 @@ if __name__ == '__main__':
     suite.addTest(run_unittest('test_case_unittest'))
     # unittest.TextTestRunner().run(suite)
     # 以下方法使用HTMLTestRunner进行执行
-    fp = open('../report/htmlReport.html', 'wb')
+    fp = open('../reports/htmlReport.html', 'wb')
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='api测试报告', description='测试情况')
     runner.run(suite)

@@ -10,7 +10,7 @@ class operateJson:
         if filename:
             self.filename = filename
         else:
-            self.filename = '../data_config/request.json'
+            self.filename = '../datas/request.json'
         self.data = self.read_data()
 
     # 读取json文件

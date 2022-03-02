@@ -2,7 +2,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from BeautifulReport import BeautifulReport
-from data.data_config_excel import *
+from businessHandler.env_flag import *
 import unittest
 
 
@@ -14,9 +14,9 @@ class RunPy:
             set_env_flag('test')
             
     def run_py(self):
-        test_suite = unittest.defaultTestLoader.discover('../y-test', pattern='test*.py')
+        test_suite = unittest.defaultTestLoader.discover('../testcases', pattern='test*.py')
         result = BeautifulReport(test_suite)
-        result.report(filename='BeautifulReport', description='api测试报告', report_dir='../report', theme='theme_default')
+        result.report(filename='BeautifulReport', description='api测试报告', report_dir='../reports', theme='theme_default')
 
 
 if __name__ == '__main__':

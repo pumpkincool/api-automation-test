@@ -1,20 +1,21 @@
 import os
 import sys
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
 
-from base.runmethod import runMethod
-from data import dependent_data
-from data import get_data
+from businessHandler.runmethod import runMethod
+from businessHandler.dependent_data import dependentData
+from businessHandler.get_excel_data import getExcelData
 from util import common_util
-from util.log import Logger
+from util.operation_log import Logger
 
 
 class RunMainMethod:
 
     def __init__(self):
         self.run_method = runMethod()
-        self.data = get_data.getData()
+        self.data = getExcelData()
         self.comm_util = common_util.Commonutil()
         self.log = Logger.logger(__name__)
 
@@ -33,7 +34,7 @@ class RunMainMethod:
                 self.log.debug('预期结果为' + str(expect))
                 depend_case = self.data.get_depend_case(i)
                 if depend_case is not None:
-                    self.depend_data = dependent_data.dependentData(depend_case)
+                    self.depend_data = dependentData(depend_case)
                     depend_res_data = self.depend_data.get_data_for_key(i)
                     depend_key = self.data.get_field_depend(i)
                     request_data[depend_key] = depend_res_data

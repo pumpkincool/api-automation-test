@@ -1,7 +1,7 @@
 from util.operation_excel import operateExcel
 from util.operation_json import operateJson
-from base.runmethod import runMethod
-from data.get_data import getData
+from businessHandler.runmethod import runMethod
+from businessHandler.get_excel_data import getExcelData
 
 
 class dependentData:
@@ -9,7 +9,7 @@ class dependentData:
     def __init__(self, case_id):
         self.oper_excel = operateExcel()
         self.oper_json = operateJson()
-        self.data = getData()
+        self.data = getExcelData()
         self.case_id = case_id
 
     def get_case_line_data(self):

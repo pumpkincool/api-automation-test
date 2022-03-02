@@ -1,12 +1,12 @@
-from data.data_config_excel import *
 import configparser
+from businessHandler import env_flag
 
 
-class EnvInfo:
+class getEnvInfo:
     def __init__(self):
-        self.env_flag = get_env_flag()
+        self.env_flag = env_flag.get_env_flag()
         self.config = configparser.ConfigParser()
-        self.config.read('../env/env.ini')
+        self.config.read('../configs/env.ini')
         
     def get_host(self):
         return self.config.get(self.env_flag, 'host')
@@ -25,10 +25,6 @@ class EnvInfo:
     
     def get_dpassword(self):
         return self.config.get(self.env_flag, 'dpassword')
-
-
-if __name__ == '__main__':
-    EnvInfo().get_host()
     
 
     

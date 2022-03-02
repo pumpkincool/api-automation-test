@@ -1,6 +1,6 @@
 import logging
 import logging.config
-logging.config.fileConfig('../data_config/logging.conf')
+logging.config.fileConfig('../configs/logging.ini')
 
 
 class Logger:

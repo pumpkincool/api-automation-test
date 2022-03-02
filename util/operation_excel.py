@@ -8,7 +8,7 @@ class operateExcel:
             self.file_name = file_name
             self.sheet_id = sheet_id
         else:
-            self.file_name = '../data_config/case.xls'
+            self.file_name = '../testcases/excel_case/case.xls'
             self.sheet_id = 0
         self.data = self.get_data()
 
