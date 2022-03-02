@@ -6,7 +6,7 @@ logging.config.fileConfig('../data_config/logging.conf')
 class Logger:
 
     def logger(self):
-        return logging.getLogger('file')
+        return logging.getLogger('console')
 
     def debug(self, message):
         self.logger().debug(message)

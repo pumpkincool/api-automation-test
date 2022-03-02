@@ -47,7 +47,6 @@ class operateExcel:
     # 根据case_Id获取行内容
     def get_row_data_by_caseId(self, case_id):
         row_num = self.get_row_num(case_id)
-        print(self.get_row_data(row_num))
         return self.get_row_data(row_num)
 
     # 根据行号获取行内容

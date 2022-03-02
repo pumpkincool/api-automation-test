@@ -30,7 +30,7 @@ class RunMainMethod:
                 request_data = self.data.get_json(i)
                 header = self.data.get_header(i)
                 expect = self.data.get_expect_result(i)
-                self.log.debug(expect)
+                self.log.debug('预期结果为' + str(expect))
                 depend_case = self.data.get_depend_case(i)
                 if depend_case is not None:
                     self.depend_data = dependent_data.dependentData(depend_case)
@@ -38,7 +38,7 @@ class RunMainMethod:
                     depend_key = self.data.get_field_depend(i)
                     request_data[depend_key] = depend_res_data
                 res = self.run_method.run_main(method, url, request_data, header)
-                self.log.debug(res)
+                self.log.debug('实际结果为' + str(res))
                 if self.comm_util.is_contain(expect, res):
                     self.data.write_result(i, 'pass')
                     pass_count.append(i)
@@ -49,8 +49,8 @@ class RunMainMethod:
             else:
                 continue
 
-        print('通过的case个数为' + str(len(pass_count)))
-        print('失败的case个数为' + str(len(fail_count)))
+        self.log.info('通过的case个数为' + str(len(pass_count)))
+        self.log.info('失败的case个数为' + str(len(fail_count)))
 
 
 if __name__ == '__main__':

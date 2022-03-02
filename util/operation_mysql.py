@@ -47,14 +47,4 @@ class operationMysql:
         finally:
             self.connectdb().cursor().close()
             self.connectdb().close()
-        return cursor.fetchall()  # list
-
-
-if __name__ == '__main__':
-    run = operationMysql('root', '123456', 'localhost', 'danica')
-    res = run.querydball('select * from pet where id="80"')
-    if res is None or len(res) == 0:
-        print("res is none")
-    else:
-        print(res)
-        print(type(res))
+        return cursor.fetchall()

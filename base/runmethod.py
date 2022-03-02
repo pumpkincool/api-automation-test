@@ -14,12 +14,8 @@ class runMethod:
     def get_main(self, url, data=None, header=None):
         if header == '' or header is None:
             res = requests.get(url, params=data)
-            print(res)
-            # print('1')
         else:
             res = requests.get(url=url, params=data, headers=header)
-            # print('2')
-            # print(res.url)
         return res.json()
 
     def run_main(self, method, url, data=None, header=None):
