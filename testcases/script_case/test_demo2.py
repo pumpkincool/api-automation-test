@@ -1,33 +1,19 @@
-import unittest
-from businessHandler.runmethod import *
-from util.operation_json import *
+from testcases.script_case.base_demo import BaseDemo
+from parameterized import parameterized
 
 
-class TestDemo2(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls) -> None:
-        print("this is setUpClass...")
-        TestDemo2.runMethod = runMethod()
-
-    def setUp(self):
-        print("this is setUp...")
-
-    def test_03(self):
+class TestDemo2(BaseDemo):
+    
+    @parameterized.expand(['pet2', 'pet3'])
+    def test02(self, key):
+        # 获取环境信息
+        host = BaseDemo.env.get_host()
+        BaseDemo.logger.info(host)
+        
+        # 发送接口请求
         url = 'https://petstore.swagger.io/v2/pet'
         header = {'accept': 'application/json', 'Content-Type': 'application/json'}
-        data = operateJson().read_keyword('pet3')
-        rst = TestDemo2.runMethod.post_main(url, data, header)
-        print('rst: ' + str(rst))
-        self.assertEqual(rst['id'], 60, "the response data is error")
+        body = BaseDemo.operateJson.read_keyword(key)
+        rst = BaseDemo.runMethod.post_main(url, body, header)
+        BaseDemo.logger.info('rst: ' + str(rst))
 
-    def test_04(self):
-        url = 'https://www.baidu.com/'
-        # rst = TestDemo.runMethod.get_main(url)
-        # print(rst)
-
-    def tearDown(self):
-        print("this is tearDown...")
-
-    @classmethod
-    def tearDownClass(cls) -> None:
-        print("this is tearDownClass...")
