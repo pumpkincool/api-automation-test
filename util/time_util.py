@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-
+import time
 
 class TimeUtil:
     
@@ -10,6 +10,19 @@ class TimeUtil:
         :return: string, 如：'2022-02-24 17:54:04'
         """
         return str(datetime.now()).split('.')[0]
+    
+    @staticmethod
+    def get_time_stamp():
+        """
+        获取当前时间
+        :return: string, 如：'2022-02-24 17:54:04.630'
+        """
+        ct = time.time()
+        local_time = time.localtime(ct)
+        data_head = time.strftime("%Y-%m-%d %H:%M:%S", local_time)
+        data_secs = (ct - int(ct)) * 1000
+        time_stamp = "%s.%03d" % (data_head, data_secs)
+        return time_stamp
     
     @staticmethod
     def datetime_to_timestamp(dtime):

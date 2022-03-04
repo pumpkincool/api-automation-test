@@ -6,14 +6,14 @@ class TestDemo(BaseDemo):
     def test01(self):
         # 获取环境信息
         host = BaseDemo.env.get_host()
-        BaseDemo.logger.info(host)
+        BaseDemo.log.info_log(host)
         
         # 发送接口请求
         url = 'https://petstore.swagger.io/v2/pet'
         header = {'accept': 'application/json', 'Content-Type': 'application/json'}
         data = BaseDemo.operateJson.read_keyword('pet3')
         rst = BaseDemo.runMethod.post_main(url, data, header)
-        BaseDemo.logger.info('rst: ' + str(rst))
+        BaseDemo.log.info_log('rst: ' + str(rst))
         
         # 断言
         self.assertEqual(rst['id'], 60, "the response data is error")
